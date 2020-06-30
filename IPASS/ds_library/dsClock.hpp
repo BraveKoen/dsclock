@@ -217,7 +217,7 @@ public:
     /// \brief
     /// Gives back the year
     /// \details
-    /// You will only get the last 2 numbers back.  
+    /// You will only get the last 2 numbers back so 2020 will be 20
     int get_year(){
         return bcd_Dec(get_data(0x06));
     }
