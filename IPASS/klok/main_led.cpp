@@ -28,6 +28,12 @@ int main(){
 
    int minut_old = -1; //to prefent updating every time
    int hour_old = -1;
+   
+   int hour_first;
+   int hour_second;
+   
+   int minut_first;
+   int minut_second;
 
    int lijst[10][3] = {{255,0,0}, {0,255,0}, {0,0,255}, {148, 0,211}, {255,255,51}, {0,0,102}, {96,96,96}, {204,0,102},{178,255, 102}, {102,0,0}};
    while(true){
@@ -48,8 +54,8 @@ int main(){
             number_four.draw_number(minutes);
    
          }else{
-            int minut_first = minutes / 10 % 10;
-            int minut_second = minutes %10;
+            minut_first = minutes / 10 % 10;
+            minut_second = minutes %10;
             number_three.draw_number(minut_first); //hwlib::cout << " Eerste getet moet 3 zijn: " << minut_first << "\n";
             number_four.draw_number(minut_second); //hwlib::cout << minut_second;
          }
@@ -63,8 +69,8 @@ int main(){
             number_one.draw_number(0);
             number_two.draw_number(hour);
          }else{
-            int hour_first = hour / 10 % 10;
-            int hour_second = hour %10;
+            hour_first = hour / 10 % 10;
+            hour_second = hour %10;
             number_three.draw_number(hour_first); hwlib::cout << hour_first << "\n";
             number_four.draw_number(hour_second); hwlib::cout << hour_second << "\n";
          }
