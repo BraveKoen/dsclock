@@ -1,0 +1,3 @@
+SOURCES += i2c_bus.cpp
+HEADER += i2c_bus.hpp
+SEARCH += $(RELATIVE)/i2c_library
