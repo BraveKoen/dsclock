@@ -51,6 +51,7 @@ int main(){
                 //number_three.draw_number(minut_first); //hwlib::cout << " Eerste getet moet 3 zijn: " << minut_first << "\n";
                 //number_four.draw_number(minut_second); //hwlib::cout << minut_second;
             }
+            //update the display if the minutes are changing 
             display << "\f" << hour_first << hour_second << " : " << minut_first << minut_second << "\n" << clock.get_date() <<
             "/" << clock.get_month() << "/" << clock.get_year() << "\n" << days[clock.get_day()-1]<<hwlib::flush;
 
@@ -67,7 +68,8 @@ int main(){
                 hour_second = hour %10;
                 //number_three.draw_number(hour_first); hwlib::cout << hour_first << "\n";
                 //number_four.draw_number(hour_second); hwlib::cout << hour_second << "\n";
-            }
+            }  
+            //update the display if the hour is updated
             display << "\f" << hour_first << hour_second << " : " << minut_first << minut_second << "\n" << clock.get_date() <<
             "/" << clock.get_month() << "/" << clock.get_year() << "\n" << days[clock.get_day()-1]<<hwlib::flush;
         }
